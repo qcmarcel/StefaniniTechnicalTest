@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <style>
+        header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+
+            & .hero {
+                text-align: left;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                margin-left: 10%;
+            }
+        }
+
+        nav {
+            text-align: center;
+
+            & ul {
+                padding-left: 0;
+                display: inline-block;
+                list-style: none;
+
+                & li {
+                    display: inline-block;
+                    padding: 0 10px;
+
+                    & a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        section {
+            text-align: center;
+
+            &.main {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                margin: 0 auto;
+
+                & .info {
+                    text-align: left;
+                    padding: 20px;
+                }
+            }
+        }
+
+        .profile {
+            filter: drop-shadow(2px 4px 6px black);
+            border-radius: 100%;
+        }
+
+        .skills ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <h1>Curriculum Vitae</h1>
+        </div>
+        <div class="hero">
+            <h2>
+                <strong>Name:</strong> Márcel Armando<br />
+                <strong>Lastname:</strong> Quintero Carrillo
+            </h2>
+            <h3>
+                <strong>Birth date:</strong> Jan 29th, 1995<br />
+                <strong>Birth place:</strong> Fusagasugá - Colombia.
+            </h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="educacion.html">Education</a></li>
+                <li><a href="experiencia.html">Jobs & Experiences</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="summary">
+        <article class="info">
+            <h1>Personal Information</h1>
+            <img src="https://media.licdn.com/dms/image/v2/D4E35AQEBluyQwriuGg/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1726253014841?e=1727733600&v=beta&t=FDIgYh2gGEb-vBEGlSvPxh1lh-StwLq79dnN3WUGBag"
+                alt="Márcel Armando Quintero Carrillo - Fullstack Developer & Software Engineer" class="profile" />
+        </article>
+    </section>
+    <section class="main">
+        <article class="info">
+            <h1>Work Experience</h1>
+            <ul>
+                <li>Fullstack Developer - 2020 - Present</li>
+                <li>Software Engineer - 2019 - 2020</li>
+                <li>Software Engineer - 2015 - 2019</li>
+            </ul>
+        </article>
+        <article class="info">
+            <h1>Education</h1>
+            <ul>
+                <li>Universidad Nacional Abierta y a Distancia - 2020 - 2024</li>
+                <li>Servicio Nacional de Aprendizaje - 2013 - 2015</li>
+            </ul>
+        </article>
+        <article class="info skills">
+            <h1>Skills</h1>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>NodeJS</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>SQL</li>
+                <li>MongoDB</li>
+                <li>PostgreSQL</li>
+                <li>MySQL</li>
+                <li>PHP</li>
+                <li>Laravel</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C#</li>
+            </ul>
+        </article>
+        <article class="info">
+            <h1>Language</h1>
+            <ul>
+                <li>English - Intermediate</li>
+                <li>Spanish</li>
+            </ul>
+        </article>
+        <article class="info">
+            <h1>Hobbies</h1>
+            <ul>
+                <li>Playing Video Games</li>
+                <li>Programming</li>
+                <li>Music</li>
+                <li>Learning Courses</li>
+                <li>Travel</li>
+            </ul>
+        </article>
+    </section>
+    <footer>
+        <p>Márcel Armando Quintero Carrillo - Fullstack Developer & Software Engineer</p>
+    </footer>
+</body>
+
+</html>
