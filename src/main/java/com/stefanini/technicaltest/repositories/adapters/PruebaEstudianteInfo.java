@@ -1,4 +1,4 @@
-package com.stefanini.technicaltest.adapters;
+package com.stefanini.technicaltest.repositories.adapters;
 
 /**
  * Projection for {@link com.stefanini.technicaltest.entities.PruebaEstudiante}

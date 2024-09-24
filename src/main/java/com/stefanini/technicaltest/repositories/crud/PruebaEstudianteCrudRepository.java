@@ -1,4 +1,4 @@
-package com.stefanini.technicaltest.repositories;
+package com.stefanini.technicaltest.repositories.crud;
 
 import com.stefanini.technicaltest.entities.PruebaEstudiante;
 import org.springframework.data.repository.CrudRepository;

@@ -1,4 +1,4 @@
-package com.stefanini.technicaltest.adapters;
+package com.stefanini.technicaltest.repositories.adapters;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -55,6 +55,7 @@ public abstract class RepositoryAdapterBase<E, I, R extends CrudRepository<E, I>
 
     public List<E> findAll(final int limit) {
         return StreamSupport.stream(repository.findAll().spliterator(), true)
+                .limit(limit)
                 .collect(Collectors.toList());
     }
 
@@ -141,7 +142,7 @@ public abstract class RepositoryAdapterBase<E, I, R extends CrudRepository<E, I>
     private void expireKey() {
 
         Long expire = this.redisTemplate.getExpire(entityName);
-        if (expire != null || expire < 0) {
+        if (!(expire == null || expire >= 0)) {
             this.redisTemplate.expire(entityName, Duration.ofHours(5L));
         }
 
