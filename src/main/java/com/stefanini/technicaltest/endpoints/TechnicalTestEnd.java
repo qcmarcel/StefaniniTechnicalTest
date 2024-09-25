@@ -11,14 +11,21 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.swing.text.html.HTMLDocument;
+
 @Slf4j
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(path = "/v1")
 public class TechnicalTestEnd {
 
-    @Autowired
-    private PruebaEstudianteService service;
+    private final PruebaEstudianteService service;
+
+    @GetMapping(path = "/hello")
+    public ResponseEntity<?> helloWorld(){
+        log.info("Hello World");
+        return new ResponseEntity<>("Hello World", HttpStatus.OK);
+    }
 
     @GetMapping(path= "/estudiantes")
     public ResponseEntity<?> showEstudiantes(){

@@ -10,7 +10,7 @@ import org.hibernate.annotations.ColumnDefault;
 @Getter
 @Setter
 @Entity
-@Table(name = "PRUEBAESTUDIANTE", schema = "mydatabase")
+@Table(name = "`PRUEBAESTUDIANTE`", schema = "mydatabase")
 public class PruebaEstudiante {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
