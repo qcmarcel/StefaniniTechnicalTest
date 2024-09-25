@@ -8,6 +8,8 @@ import com.stefanini.technicaltest.repositories.PruebaEstudianteRepository;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public class PruebaEstudianteAdapter extends RepositoryAdapterBase<PruebaEstudiante,Long, PruebaEstudianteCrudRepository> implements PruebaEstudianteRepository {
     protected PruebaEstudianteAdapter(PruebaEstudianteCrudRepository repository, RedisTemplate<String, String> redisTemplate, ObjectMapper mapper) {
@@ -17,5 +19,10 @@ public class PruebaEstudianteAdapter extends RepositoryAdapterBase<PruebaEstudia
     @Override
     public TypeReference<PruebaEstudiante> getTypeReference() {
         return new TypeReference<>() {};
+    }
+
+    @Override
+    public Optional<PruebaEstudiante> findByIdOrNombre(Long id, String nombre) {
+        return getRepository().findByIdOrNombre(id, nombre);
     }
 }
